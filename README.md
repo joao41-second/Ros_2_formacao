@@ -158,7 +158,7 @@ int main(int argc, char * argv[])
 
     // Criar Publisher no Topic /ola
     auto publisher = node->create_publisher<std_msgs::msg::String>(
-        "/ola", 10
+        "/chatter", 10
     );
 
     // Criar mensagem
