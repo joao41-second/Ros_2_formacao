@@ -354,21 +354,6 @@ docker exec -it ros2_humble bash
 
 ---
 
-## 11. Correções face aos slides
-
-Alguns comandos dos slides têm pequenos erros. Use as versões deste guia:
-
-| Slide | No slide | Correto |
-|---|---|---|
-| 5 | `source /opt/ros/humble/setup.sh` | `source /opt/ros/humble/setup.bash` |
-| 6 | `mkdir -p root/ros2_ws/src && cd ~/ros2_ws/src` | `mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src` |
-| 6 | `--dependencies rclcpp` | `--dependencies rclcpp std_msgs` (o publisher usa `std_msgs`) |
-| 6 | `cd root/ros2_ws && colcon build` | `cd ~/ros2_ws && colcon build` |
-| 9 | `sourece insatll /setup.sh` | `source install/setup.bash` |
-| 7 | Publica **uma só vez** em `/ola` e termina | Este guia usa um *timer* e publica continuamente em `/chatter`, o que permite ver a comunicação com `ros2 topic echo` |
-
----
-
 ## 12. Resumo final
 
 - [ ] Imagem ROS 2 Humble descarregada e contentor disponível
